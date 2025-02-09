@@ -1,0 +1,25 @@
+ar:
+  log_in: "تسجيل الدخول"
+  sign_out: "تسجيل الخروج"
+  new_community: "مجتمع جديد"
+  sign_up: "إنشاء حساب"
+  forgot_your_password: "نسيت كلمة المرور؟"
+  new_topic: "إنشاء موضوع جديد"
+  helpers:
+    placeholder:
+      community:
+        name: "اسم المجتمع"
+        description: "وصف المجتمع"
+      topic: 
+        title: "اسم الموضوع"
+        text: "نص الموضوع"
+    submit: 
+      community:
+        submit: "إنشاء مجتمع"
+      topic:
+        submit: "إنشاء موضوع"
+    
+    topics:
+      new:
+        select: "المجتمع المناسب للموضوع"
+

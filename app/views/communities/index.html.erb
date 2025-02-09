@@ -1,0 +1,10 @@
+<% if @communities.nil? || @communities.empty? %>
+  <p>No communities found.</p>
+<% else %>
+  <% @communities.each do |community| %>
+    <h2><%= community.name %></h2>
+    <p><%= community.description %></p>
+  <% end %>
+<% end %>
+
+<!-- <%= debug @communities %> -->
