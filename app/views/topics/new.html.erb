@@ -1,0 +1,25 @@
+<h1 class="font-bold text-4xl">Create New Topic</h1>
+
+<% if @topic.errors.any? %>
+  <ul class="text-red-500">
+    <% @topic.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with model: @topic, url: topics_path, local: true do |form| %>
+  <p>
+    <%= form.collection_select :community_id, Community.order(:name), :id, :name, { prompt: "Select Community" } %>
+  </p>
+  
+  <p>
+    <%= form.text_field :title, placeholder: "Enter title", class: "border p-2 w-full" %>
+  </p>
+  
+  <p>
+    <%= form.text_area :text, placeholder: "Enter text", class: "border p-2 w-full" %>
+  </p>
+  
+  <%= form.submit "Create Topic", class: "bg-blue-500 text-white px-4 py-2 rounded" %>
+<% end %>

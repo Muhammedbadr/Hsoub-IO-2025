@@ -4,22 +4,63 @@ ar:
   new_community: "مجتمع جديد"
   sign_up: "إنشاء حساب"
   forgot_your_password: "نسيت كلمة المرور؟"
+  cancel_my_account: "إلغاء حسابي"
+  update: "تحديث"
   new_topic: "إنشاء موضوع جديد"
+  create_topic: "إنشاء موضوع"
+  post: "نشر"
+  create_comment: "إنشاء تعليق"
+  voting_thanks: "شكراً على التصويت"
+  my_account: "حسابي"
+  my_comments: "تعليقاتي"
+  edit_account: "تعديل الحساب" 
+  reply: "إضافة رد"
+
   helpers:
     placeholder:
       community:
         name: "اسم المجتمع"
         description: "وصف المجتمع"
-      topic: 
-        title: "اسم الموضوع"
+      topic:
+        title: "عنوان الموضوع"
         text: "نص الموضوع"
-    submit: 
+      comment:
+        text: "نص التعليق"
+    submit:
       community:
         submit: "إنشاء مجتمع"
       topic:
         submit: "إنشاء موضوع"
-    
-    topics:
-      new:
-        select: "المجتمع المناسب للموضوع"
+  topics:
+    new:
+      select: "اختر المجتمع المناسب للموضوع"
+  comments:
+    comment:
+      reply: "إضافة رد"
+    new:
+      heading: "إضافة رد"
+  comment:
+    create:
+      success: "تمت إضافة التعليق بنجاح"
+    user_comments:
+      my_comments: "تعليقاتي"
+  users:
+    show:
+      my_posts: "مساهماتي"
 
+  activerecord:
+    attributes:
+      user:
+        first_name: "الاسم الأول"
+        last_name: "اسم العائلة"
+        description: "الوصف"
+        country: "الدولة"
+        language: "اللغة"
+        gender: "الجنس"
+        birth_date: "تاريخ الميلاد"
+    errors:
+      models:
+        comment:
+          attributes:
+            text:
+              blank: "لا يمكن إضافة تعليق فارغ"

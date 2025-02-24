@@ -1,160 +1,71 @@
-#   Copyright (c) 2010, Diaspora Inc.  This file is
-#   licensed under the Affero General Public License version 3.  See
-#   the COPYRIGHT file.
-
-# Localization file for French. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 ar:
-  hello: "أهلا وسهلا بك"
-  application:
-      helper:
-          unknown_person: "شخص غير معروف"
-          new_requests: "مطالب  جديدة"
-  dashboards:
-      helper:
-          home: "القسم العام"
-  error_messages:
-      helper:
-          invalid_fields: "بيانات غير صحيحة"
-          correct_the_following_errors_and_try_again: "أدخل البيانات الصحيحة ثم حاول مرة أخرى"
-  people:
-      helper:
-           results_for: "%{params}  نتائج تابعة  "
-           people_on_pod_are_aware_of: " gente en pod estan al tanto de "
-  layouts:
-      application:
-          edit_profile: "تعديل الصفحة الشخصية"
-          logout: "خروج"
-  shared:
-      aspect_nav:
-          all_aspects: "كل الأركان"
-          manage: "التحكم"
-          manage_your_aspects: "لوحات التحكم بالأركان"
-      sub_header:
-          all_aspects: "كل الأركان"
-          manage_aspects: "لوحات التحكم بالأركان"
-      publisher:
-          share: "مشاركة"
-      aspect_friends:
-          add_friends: "إضافة أصدقاء"
-  albums:
-      album:
-          you: "أنت"
-      new_album:
-          create: "إنشاء"
-          add_a_new_album: "إضافة ألبوم جديد"
-      show: 
-          edit_album: "تعديل الألبوم"
-          albums: "ألبومات"
-          updated: "تحديث"
-          by: "من طرف"
+  devise:
+    confirmations:
+      confirmed: "تم تأكيد حسابك الشخصي بنجاح."
+      send_instructions: "سوف تصلك رسالة خلال دقائق على بريدك الإلكتروني تتضمن الخطوات اللازمة لتأكيد حسابك."
+      send_paranoid_instructions: "إذا كان بريدك الإلكتروني موجود بالفعل، فسوف تصلك رسالة خلال دقائق تتضمن الخطوات اللازمة لتأكيد حسابك."
+    failure:
+      already_authenticated: "تم تسجيل دخولك مُسبقاً."
+      inactive: "لم يتم تنشيط حسابك بعد!!"
+      invalid: "البريد الإلكتروني أو كلمة المرور غير صحيحة."
+      locked: "حسابك مُغلق."
+      last_attempt: "لديك محاولة أخيرة قبل أن يتم تعليق حسابك."
+      not_found_in_database: "البريد الإلكتروني أو كلمة المرور غير صحيحة."
+      timeout: "انتهت صلاحية الجلسة، يُرجى تسجيل الدخول مرة أخرى للمتابعة."
+      unauthenticated: "تحتاج إلى تسجيل الدخول أولاً."
+      unconfirmed: "يجب تأكيد بريدك الإلكتروني قبل المتابعة."
+    mailer:
+      confirmation_instructions:
+        subject: "تعليمات تأكيد الحساب"
+      reset_password_instructions:
+        subject: "تعليمات إعادة تعيين كلمة المرور"
+      unlock_instructions:
+        subject: "تعليمات إعادة تفعيل الحساب"
+      email_changed:
+        subject: "تغيير البريد الإلكتروني"
+      password_change:
+        subject: "تغيير كلمة المرور الخاصة بك"
+    omniauth_callbacks:
+      failure: "لم تتمكن من المصادقة باستخدام %{kind} بسبب: %{reason}."
+      success: "تمت المصادقة بنجاح باستخدام %{kind}."
+    passwords:
+      no_token: "لا يمكنك الوصول إلى هذه الصفحة إلا من خلال رسالة إعادة تعيين كلمة المرور."
+      send_instructions: "سيتم إرسال رسالة بريد إلكتروني خلال دقائق تتضمن خطوات إعادة تعيين كلمة المرور."
+      send_paranoid_instructions: "إذا كان بريدك الإلكتروني موجودًا بالفعل، فسوف تتلقى تعليمات إعادة تعيين كلمة المرور."
+      updated: "تم تغيير كلمة المرور بنجاح، وتم تسجيل دخولك."
+      updated_not_active: "تم تغيير كلمة المرور بنجاح."
+    registrations:
       edit:
-          editing: "تعديل"
-          updated: "تحديث"
-          are_you_sure: "هل أنت ثابت ؟"
-          delete_album: "حذف الألبوم"
-          cancel: "إلغاء"
-      index:
-          home: "الصفحة الرئيسية"
-          new_album: "ألبوم جديد"
-      helper:
-          friends_albums: "البومات الأصدقاء"
-          your_albums: "ألبوماتك"
-      create:
-          success: ". %{name} لقد انشأت ألبوماً جديدا بإسم"
-      update:
-          success: ".بنجاح %{name} تم تعديل الألبوم "
-          failure: "لم تنجح %{name} تعديل الألبوم "
-      destroy:
-          success: ". %{name} تم حذف الألبوم"
-  aspects:
-      index:
-          photos: "صور"
-      show:
-          photos: "صور"
-      manage:
-          add_a_new_aspect: "إضافة ركن جديد"
-          add_a_new_friend:  "إضافة صديق جديد"
-          show: "Voir"
-          update_aspects: "تحديث الأركان"
-          requests: "طلب"
-          ignore_remove: "تجاهل / حذف"
-      new_aspect:
-          add_a_new_aspect: "إضافة ركن جديد"
-          create: "إنشاء"
-      create:
-          success:".إضغط على الجهة اليسرى لإعلام دياسبورا بأنها تستطيع مشاهدة الركن"
-  users:
-      edit:
-          cancel: "إلغاء"
-          update_profile: "تحديث الصفحة الشخصية"
-          home: "الصفحة الرئيسية"
-          diaspora_username: "إسم المستخدم  دياسبورا"
-          info: "المعلومات"
-          picture: "صورة"
-          editing_profile: "تعديل الصفحة الشخصية"
-          albums: "ألبومات"
-          you_dont_have_any_photos: "ليست لديك أي صورة ! إلتحق بالصفحة "
-          page_to_upload_some:  ".لإلحاق أخر"
-  comments:
-      comment:
-          ago: "منذ"
-      new_comment:
-          comment: "تعليق"
-  photos:
-      show:
-          prev: "سابق"
-          full_size: "الحجم الأصلي"
-          next: "التالي"
-          edit_photo: "تعديل الصورة"
-          delete_photo: "حذف الصورة"
-          are_you_sure: "هل أنت متأكد ؟"
-          comments: "تعاليق"
-      edit:
-          editing: "تعديل"
-          are_you_sure: "هل أنت متأكد ؟"
-          delete_photo: "حذف الصورة"
-      photo:
-          show_comments: "أظهر التعاليق"
-          posted_a_new_photo_to: "عرض صورة أخرى على"
-      new:
-          new_photo: "صورة جديدة"
-          back_to_list: "الرجوع إلى القائمة"
-          post_it: "!أعرضها"
-  registrations:
-      new:
-          sign_up: "تسجيل"
-  status_messages:
-      new_status_message:
-          tell_me_something_good: "قل لي شيئاً"
-          oh_yeah: "!نعم"
-      status_message:
-          show_comments: "أظهر التعاليق"
-          delete: "حذف"
-          are_you_sure: "هل أنت متأكد ؟"
-      show:
-          status_message: "رسالة الحالة"
-          comments: "تعاليق"
-          are_you_sure: "هل أنت متأكد ؟"
-          destroy: "Détruire"
-          view_all: "تدمير"
-          message: "رسالة"
-          owner: "Propriétaire"
-  people:
-      index:
-          add_friend: "إضافة صديق"
-          real_name: "الاسم الحقيقي"
-          diaspora_handle: "المعالجة من دياسبورا"
-          thats_you: "! هل هو أنت"
-          friend_request_pending: "طلب صدقة فالإنتظار"
-          you_have_a_friend_request_from_this_person: "لديك طلب صداقة من طرف هذا الشخص"
-      new:
-          new_person: "شخص جديد"
-          back_to_list: "الرجوع إلى القائمة"
-      show:
-          last_seen: "%{how_long_ago} :أخر إتصال"
-          friends_since: "%{how_long_ago} : أصدقاء منذ"
-          save: "تسجيل"
-          are_you_sure: "هل أنت متأكد ؟"
-          remove_friend: "حذف صديق"
+        title: "تعديل الحساب"
+        select_language: "اختر اللغة"
+        select_gender: "اختر الجنس"
+        select_day: "اختر اليوم"
+        select_month: "اختر الشهر"
+        update: "تحديث"
+        cancel_my_account: "إلغاء حسابي"
+      destroyed: "تم حذف حسابك بنجاح، نأمل أن نراك مجددًا!"
+      signed_up: "تم إنشاء الحساب بنجاح، أهلاً بك!"
+      signed_up_but_inactive: "تم إنشاء الحساب، ولكنه غير مفعل. يرجى تفعيله لتسجيل الدخول."
+      signed_up_but_locked: "تم إنشاء الحساب، لكنه مغلق حاليًا."
+      signed_up_but_unconfirmed: "تم إرسال رسالة تأكيد إلى بريدك الإلكتروني، يرجى اتباع التعليمات لتفعيل حسابك."
+      update_needs_confirmation: "تم تحديث معلوماتك بنجاح، ولكن نحتاج إلى تأكيد بريدك الإلكتروني الجديد. يرجى اتباع التعليمات المرسلة إلى بريدك الإلكتروني الجديد."
+      updated: "تم تحديث حسابك بنجاح."
+      updated_but_not_signed_in: "تم تحديث حسابك، ولكن بعد تغيير كلمة المرور يجب تسجيل الدخول مرة أخرى."
+    sessions:
+      signed_in: "تم تسجيل الدخول بنجاح."
+      signed_out: "تم تسجيل الخروج بنجاح."
+      already_signed_out: "تم تسجيل الخروج بالفعل."
+    unlocks:
+      send_instructions: "تم إرسال رسالة بريد إلكتروني تحتوي على خطوات إعادة تفعيل الحساب."
+      send_paranoid_instructions: "إذا كان حسابك موجودًا، فسوف تتلقى رسالة بريد إلكتروني تحتوي على الخطوات اللازمة لإعادة تفعيله."
+      unlocked: "تمت إعادة تفعيل حسابك بنجاح، يرجى تسجيل الدخول للمتابعة."
+  errors:
+    messages:
+      already_confirmed: "تم تأكيد الحساب مسبقًا، يرجى محاولة تسجيل الدخول."
+      confirmation_period_expired: "انتهت صلاحية رابط التأكيد، يُرجى طلب تأكيد الحساب مجددًا."
+      expired: "انتهت صلاحية هذا الرابط، يرجى طلب رابط جديد."
+      not_found: "لم يتم العثور عليه."
+      not_locked: "لم يكن حسابك مغلقًا."
+      not_saved:
+        one: "لم يتم حفظ %{resource} بسبب الخطأ التالي:"
+        other: "لم يتم حفظ %{resource} بسبب الأخطاء التالية (%{count}):"

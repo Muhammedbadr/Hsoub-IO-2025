@@ -1,0 +1,12 @@
+<%= render "user_profile"%>
+<h1><%= t(".my_posts")%></h1>
+<h1><%= link_to t("my_comments") , u_comments_path(@user) %></h1>
+
+<% if @posts.empty? %>
+  <p> لا يوجد مشاركات </p>
+<% else %>
+  <% @posts.each do |post| %>
+        <h2 class="text-xl font-bold"><%= post.title %></h2>
+        <p class="text-gray-600"><strong>Topic:</strong> <%= post.topic.text %></p>
+  <% end %>
+<% end %>

@@ -1,0 +1,37 @@
+
+<h1 class="text-2xl font-bold"><%= @post.title %></h1>
+
+<p>Community: <%= @post.community.name if @post.community %></p>
+
+<% if @post.topic.present? %>
+  <p class="text-gray-600"><strong>Topic:</strong> <%= @post.topic.text %></p>
+<% end %>
+
+<%= link_to t('.back_to_posts', default: "Back to Posts"), posts_path, class: "text-blue-500 underline" %>
+
+
+<div>
+  <%= button_to t("like"), vote_post_path(@post, type: "up"), method: :post %>
+  <p><%= @post.find_votes_for(vote_scope: "reputation").sum(:vote_weight) %></p>
+  <%= button_to t("dislike"), vote_post_path(@post, type: "down"), method: :post %>
+</div>
+
+
+
+<h2 class="text-xl font-semibold mt-4"><%= t('.add_comment', default: "Add a Comment") %></h2>
+<%= form_with(model: [@post, @comment], local: true) do |form| %>
+  <div>
+    <%= form.text_area :text, placeholder: t('.write_comment', default: "Write your comment here"), class: "border p-2 w-full" %>
+  </div>
+  <div>
+    <%= form.submit t('.create_comment', default: "Create Comment"), class: "bg-blue-500 text-white px-4 py-2 rounded mt-2" %>
+  </div>
+<% end %>
+
+<h3 class="text-xl font-semibold mt-6">💬 <%= t('.comments', default: "Comments") %></h3>
+
+<% if @post.comments.any? %>
+  <%= nested_comments @post.comments.arrange(order: :created_at) %>
+<% else %>
+  <p class="text-gray-500 mt-4">🚀 <%= t('.no_comments_yet', default: "No comments yet. Be the first to comment!") %></p>
+<% end %>

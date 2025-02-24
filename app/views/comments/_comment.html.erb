@@ -1,0 +1,12 @@
+<div class="mt-4 space-y-4">
+  <div class="border p-4 rounded-lg shadow-sm bg-gray-50">
+    <ul class="flex items-center justify-between">
+      <li class="text-blue-600 font-semibold"><%= comment.user.email %></li>
+      <li class="text-gray-500 text-sm">
+        <%= comment.created_at.strftime("%B %d, %Y at %I:%M %p") %>
+      </li>
+    </ul>
+    <p class="mt-2 text-gray-800 "><%= comment.text %></p>
+    <%= link_to t('reply'), new_post_comment_path(comment.post, parent_id: comment), class: "text-blue-500 underline" %>
+  </div>
+</div>

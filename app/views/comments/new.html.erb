@@ -1,0 +1,13 @@
+<h1><%= t(".heading")%></h1>
+<%= render @comment %>
+
+
+<%= form_with(model: [@post, @post.comments.build], local: true) do |form| %>
+  <%= form.hidden_field(:parent_id, value: params[:parent_id]) %>
+  <div>
+    <%= form.text_area :text, placeholder: "Write your comment here", class: "border p-2 w-full" %>
+  </div>
+  <div>
+    <%= form.submit t("create_comment"), class: "bg-blue-500 text-white px-4 py-2 rounded mt-2" %>
+  </div>
+<% end %>

@@ -1,0 +1,22 @@
+<div class="card shadow-sm p-4 rounded">
+  <div class="d-flex align-items-center mb-3">
+    <h2 class="mb-0">
+      <%= @user.first_name %> <%= @user.last_name %>
+    </h2>
+  </div>
+
+  <p class="text-muted"><%= @user.description.presence || "لا يوجد وصف متاح" %></p>
+
+  <ul class="list-unstyled">
+    <li><strong>البريد الإلكتروني:</strong> <%= @user.email %></li>
+    <li><strong>الدولة:</strong> <%= @user.country %></li>
+    <li><strong>الجنس:</strong> <%= @user.gender %></li>
+    <li><strong>نقاط السمعة:</strong> <span class="badge bg-success"><%= @user.reputation %></span></li>
+    <li>
+      <strong>تاريخ التسجيل:</strong>
+      <span class="text-muted">
+        <%= @user.created_at.strftime("%B %d, %Y at %I:%M %p") %>
+      </span>
+    </li>
+  </ul>
+</div>

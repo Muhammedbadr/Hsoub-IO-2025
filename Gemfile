@@ -58,3 +58,5 @@ end
 
 gem "devise"
 gem "devise-i18n"
+gem "ancestry"
+gem "acts_as_votable"
